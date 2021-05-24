@@ -1,22 +1,30 @@
-# XSYU Bachelor Thesis
+# 这是什么
 
-本模板是 [西安石油大学](http://www.xapi.edu.cn/) 本科生毕业论文 LaTeX 免费模板。如你所知，LaTeX 是一个流行的编辑科学类文章的工具。大多数科学类书籍、期刊、文章都采用了 LaTeX，而它也是完成毕业论文的不二选择。中国大部分的知名大学都拥有自己的本科生以及硕博毕业论文 LaTeX 模板，但西安石油大学没有。这是我校本科生模板的首次发布，如果模板中有错误希望您帮助修改来一同完善这个模板。
+**这是我的毕业论文（目前还未完成,将在毕业后完整提交，提供Latex写作参考）**
 
-**使用这个模板可以使你从无聊的格式限制中解脱出来，从而更专注地阐述自己的想法。** 相信学习 LaTeX 会成为
-你的一段宝贵经历，尤其是准备考研的同学。如果你有关于本模板的良好意见和建议，请在 Issues 中提出。
+# 为什么不是word
+
+本论文是借助的 [西安石油大学](http://www.xapi.edu.cn/) 本科生毕业论文 LaTeX 免费模板。如你所知，LaTeX 是一个流行的编辑科学类文章的工具。
+
+**使用Latex可以使你从无聊的格式限制中解脱出来，从而更专注地阐述自己的想法。** 相信学习 LaTeX 会成为你的一段宝贵经历
 
 ## 使用方法
+包管理安装 `textlive-full`
 
-推荐下载安装并使用 [MiKTeX](https://miktex.org/download) 编译系统，以及 [TeXstudio](https://sourceforge.net/projects/texstudio/) 编辑器。
-
-* [点击这里](https://github.com/h2y/xsyu-latex/archive/master.zip) 下载此项目。
-
-* 使用 TeX 编辑器打开 `thesis.tex`，并将编译方式设定为 `XeLaTeX`。
+* 使用 vs code 编辑器打开 `thesis.tex`，并将编译方式设定为 `XeLaTeX`
+* ps： 在安装Vs code LaTex的相关扩展包后可以方便的及时预览修改
 
 * 尝试进行编译，生成 `thesis.pdf` 文档。
+ps：
+可能缺少某种字体(fandol)，需要单独下载，安装参考：
+` https://wiki.archlinux.org/title/Fonts_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93 `
 
 ## 相关资源
 
 - 一份其实很短的 LaTeX 入门文档：<http://liam0205.me/2014/09/08/latex-introduction/>
 
 - LaTeX 开源小屋：<http://www.latexstudio.net/>
+
+
+# 致谢
+感谢[胡学长](https://github.com/h2y/xsyu-latex)的该latex模板，本论文基于该模板

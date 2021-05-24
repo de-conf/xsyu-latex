@@ -4,7 +4,7 @@
 }
 \thispagestyle{abstractStyle} 
 
-\section*{\zihao{3} \centering 计算机学院答辩管理系统的设计与实现}
+\section*{\zihao{3} \centering 基于Arduino分布式温控系统设计与实现}
 %\addcontentsline{toc}{section}{摘要}  % 摘要是否包括进目录中
 
 \begin{center}
@@ -12,17 +12,18 @@
 \end{center}
 \vspace{2em}
 
-随着互联网的高速发展，人们生活在数字化的信息时代。相比以前较难获取信息，当下的人们可以十分便捷地接触到海量数据，以至于人们淹没在数据中难以快速的制定合适的决策。在校园中，学院的日常教务工作同样面临着这个难题，迫切地需要将已有的业务逻辑线上化。
+随着物联网的快速发展，进入了万物互联的时代，越来越多的设备可以进行联网控制，通过网络进行数据收集以及对设备的远程控制。当下大量电子设备的使用，由于电子设备本身的温度的敏感性，对于环境温度的监控和控制也尤为重要。
 
-随着学生毕业人数逐年增加，传统的大学生教务管理方案面临着挑战。这些方法往往存在性能问题，落后的系统也不能满足快速响应、较大吞吐量和现代应用服务安全的要求。因此，本文设计了一个基于Meteor框架的高性能云信息系统，实现了高校毕业设计答辩管理。实验结果表明，与 PHP、ASP 等技术实现的传统信息系统相比，该系统具有更快的响应速度和吞吐量。为传统的高校毕业管理制度提供了可靠的解决方案。
+随着越来越多的机房和交换机，路由器，服务器的部署，其中的温度监控和控制也越来越重要。有资料表明\footnote{热力学中最重要的公式——阿累尼乌斯方程，它是用来描述化学物质反应速率随温度变化关系的经验公式。阿累尼乌斯（Arrhenius）方程 $\ k=Ae^{{{-E_{a}}/{RT}}}$ 可以用来计算电容寿命，电容工作每下降10度，其寿命增加一倍，反过来也就是电容温度升高10度，电容寿命减小一倍}：环境温度每提高\SI{10}{\degreeCelsius}，元器件寿命约降低30\%-50\%，影响小的也基本都在10\%以上，设备更持久的运行的需求，对于机房的温度就需要得到进一步的控制，这样才能增长使用的寿命。相对于传统的人员运维和监控，浪费大量的人力和财力资源，因此，迫切需要自动化可远程监控的管理平台，来把巡检和温度操控这种重复性劳动改革为自动化处理。
 
-根据开发高校毕业设计答辩管理系统的需求，我们首先将功能抽象化，确定了毕业设计答辩工作的流程，以及用户角色划分。采用了JS全栈开发，选用了 Meteor 开发框架，数据库采用MongoDB，以及将React作为前端数据渲染引擎。这些都是目前web开发中最为流行的工具。
+根据基于Arduino分布式温控系统设计与实现的需求，首先将功能抽象化，确定了采用C/S的结构模式。客户端采用Arduino开发板和传感器用来采集数据和控制红外发射温度控制信号，服务端采用LNMP (Linux+Nginx+Mysql+Python)进行远程信息的收集和监控以及警报。其中，采用了Linux为操作系统，Nginx为Web Server，Mysql对采集信息进行数据存储，Python的flask框架作为Web应用程序框架共同构成了服务端的温度监控报警系统。客户端与服务端之间由MQTT协议负责数据通信。
 
-我们遵循了Meteor和React所提倡的理念：前后端之间只对数据进行交互，对数据的渲染由客户端完成而非服务器端。包括对数据库读写的相关逻辑，都在客户端中被实现，节省了发送和接受请求的过程，同时安全性也是有保证的。在实际的开发中，我们感受到了这些特性所带来的便利性，那就是应用逻辑清晰，并且开发速度很快。也正是由于将数据的渲染交给了浏览器，从而大大降低了服务器的负载，在最后的压力测试中表现出了很好的成绩。
+通过对于该系统的实际应用，由Arduino自动控制空调温度，平台监控温湿度、烟雾信息，既可保证机房内温度的均衡和稳定，又起到了节能减排的效果。并且增加了烟雾报警系统，对于火灾烟雾有了警报，方便运维人员更快速的处理突发情况，在温度控制方面减少了人工干预和处理，极大的解放了人力成本。
+
 
 \vspace{1em}
 \noindent
-\textbf{关键词：}信息系统；教学辅助管理系统；Web开发；JavaScript；Node.js
+\textbf{关键词：}控制系统；分布式温度控制系统；Web开发；Arduino；Python
 
 
 \clearpage
@@ -32,7 +33,7 @@
 }
 \thispagestyle{abstractStyleEn} 
 
-\section*{\songti\zihao{3} \centering \textbf{Design and Implementation of the Computer College Graduation Inspection Management System}}
+\section*{\songti\zihao{3} \centering \textbf{Design and Implementation of Distributed Temperature Control System based on Arduino}}
 %\addcontentsline{toc}{section}{Abstract}  % 英文摘要是否包括进入目录
 
 \begin{center}
@@ -40,15 +41,15 @@
 \end{center}
 \vspace{2em}
 
-With the rapid development of the Internet, people are living in the digital information age. Compared with the previous difficult to obtain information, people in the moment can easily access to massive data, so that it is difficult for people to drown out the data quickly to make appropriate decisions. On the campus, the daily academic work of the college is also facing this problem, and it is urgent to online the existing business logic.
+With the rapid development of the Internet of Things and entering the era of the Internet of Everything, more and more devices can be controlled by the Internet, data collection and remote control of devices through the network. At present, the use of a large number of electronic devices is particularly important for monitoring and controlling the ambient temperature due to the temperature sensitivity of the electronic devices themselves.
 
-With the increase in the number of students graduating year by year, the traditional management plan for college student education is facing challenges. These methods often have performance problems, and backward systems cannot meet the requirements for fast response, large throughput, and modern application service security. Therefore, this paper designs a high-performance cloud information system based on Meteor framework, which realizes the management of college graduation design defense. Experimental results show that the system has faster response speed and throughput than traditional information systems implemented by PHP, ASP and other technologies. It provides a reliable solution for the traditional university graduation management system.
+Some data show that: every time the ambient temperature increases by \SI{10}{\degreeCelsius}, the life of the components is reduced by 30\%-50\%, and the impact is basically more than 10\%. The equipment needs more durable operation, and the temperature of the computer room needs to be further improved. Control, so as to increase the life span of use. Compared with traditional personnel operation and maintenance and monitoring, a lot of human and financial resources are wasted. Therefore, there is an urgent need for an automated management platform that can be remotely monitored to reform the repetitive labor of inspection and temperature alignment into automated processing.
 
-According to the requirements for the development of graduation design defense management system in colleges and universities, we first abstracted the function, determined the process of graduation design reply work, and the division of user roles. JS full stack development was used, the Meteor development framework was chosen, the database was MongoDB, and React was used as the front-end data rendering engine. These are the most popular tools in web development.
+According to the requirements of the design and implementation of the Arduino-based distributed temperature control system, the function is abstracted first, and the C/S structure mode is determined to be adopted. The client uses Arduino development boards and sensors to collect data and control infrared emission temperature control signals, and the server uses LNMP (Linux + Nginx + Mysql + Python) for remote information collection and monitoring and alarms. The web application framework together constitutes the temperature monitoring and alarm system on the server side. The MQTT protocol is responsible for data communication between the client and the server.
 
-We followed the philosophy advocated by Meteor and React: only the data is exchanged between the front and back ends, and the rendering of the data is done by the client instead of the server. Including the relevant logic for reading and writing to the database is implemented in the client, saving the process of sending and receiving requests, and the security is also guaranteed. In the actual development, we have felt the convenience brought by these features, that is, the application logic is clear and the development speed is very fast. It is also due to the rendering of the data to the browser, which greatly reduces the load on the server and shows good results in the final stress test.
+Through the actual application of the system, the Arduino automatically controls the temperature of the air conditioner, and the platform monitors the temperature, humidity, and smoke information, which can not only ensure the balance and stability of the internal temperature of the computer room, but also save energy. In addition, a smoke alarm system has been added to provide an alarm for fires, which facilitates faster handling by operation and maintenance personnel, reduces manual intervention and processing in terms of temperature control, and greatly liberates labor costs.
 
 \vspace{1em}
 \noindent 
-\textbf{Keywords: }Information System; Teaching Aid Management System; Web Development;\\JavaScript; Node.js;
+\textbf{Keywords: }Control system; Distributed temperature control system; Web development; Arduino; Python
 
