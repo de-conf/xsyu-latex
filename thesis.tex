@@ -1,4 +1,4 @@
-\documentclass[cs4size, a4paper, openany, twoside]{ctexart}
+\documentclass[cs4size, a4paper, twoside]{ctexart}
 \usepackage{xeCJK}
 
 %章节总标题加点
@@ -23,7 +23,7 @@
 \geometry{top=3.0cm,bottom=2.7cm,left=2.5cm,right=2.5cm}
 %\usepackage{caption2}               % 浮动图形和表格标题样式
 \usepackage{siunitx}                 % 温度
-%\usepackage{mhchem}                  % 化学元素
+\usepackage{mhchem}                  % 化学元素
 %====================按章编号==========================
 \numberwithin{equation}{section}
 \numberwithin{table}{section}
@@ -66,6 +66,7 @@
 \usepackage{pifont}                  % 支持圈数字 %\ding{number}
 \usepackage{hyperref}                % 交叉引用
 \usepackage{caption}
+\usepackage{float}
 \captionsetup{figurewithin=section}
 
 %==================== 源码和流程图 ====================
