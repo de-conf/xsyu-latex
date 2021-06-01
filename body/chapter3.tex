@@ -56,7 +56,7 @@ MySQL具有以下特性：
 	\item MySQL 使用标准的 SQL 数据语言形式。
 	\item MySQL 可以运行于多个系统上，并且支持多种语言。这些编程语言包括 C、C++、Python、Java、Perl、PHP、Eiffel、Ruby 和 Tcl 等。
 	\item MySQL 支持大型数据库，支持 5000 万条记录的数据仓库，32 位系统表文件最大可支持 4GB，64 位系统支持最大的表文件为8TB。
-	\item MySQL 是可以定制的，采用了 GPL 协议，你可以修改源码来开发自己的 MySQL 系统。
+	\item MySQL 是可以定制的，采用了 GPL 协议，可以修改源码来开发自己的 MySQL 系统。
 \end{itemize}
 
 \subsection{Python开发语言 Flask模块}
@@ -137,23 +137,27 @@ def to_dict(self):  #单个对象方法
 REST全称是Representational State Transfer，中文意思是表述（通常译为表现层状态转移）。 REST本身并没有创造新的技术、组件或服务，而隐藏在RESTful背后的理念就是使用Web的现有特征和能力， 更好地使用现有Web标准中的一些准则和约束。虽然REST本身受Web技术的影响很深， 但是理论上REST架构风格并不是绑定在HTTP上，只不过目前HTTP是唯一与REST相关的实例。 所以我这里描述的REST也是通过HTTP实现的REST。
 
 REST全称是表述性状态转移，那究竟指的是什么的表述? 其实指的就是资源。任何事物，只要有被引用到的必要，它就是一个资源。资源可以是实体(例如手机号码)，也可以只是一个抽象概念(例如价值) 。下面是一些资源的例子：
-\\某用户的手机号码
-\\某用户的个人信息
+\begin{itemize}
+	\item 某用户的手机号码
+	\item 某用户的个人信息
+\end{itemize}
 
 要让一个资源可以被识别，需要有个唯一标识，在Web中这个唯一标识就是URI(Uniform Resource Identifier)。
 
 URI既可以看成是资源的地址，也可以看成是资源的名称。如果某些信息没有使用URI来表示，那它就不能算是一个资源， 只能算是资源的一些信息而已。URI的设计应该遵循可寻址性原则，具有自描述性，需要在形式上给人以直觉上的关联。这里以github网站为例，给出一些还算不错的URI：
-https://github.com/git/git
-https://github.com/git/git/blob/master/block-sha1/sha1.h
-https://github.com/git/git/commit/e3af72cdafab5993d18fae056f87e1d675913d08
-https://github.com/git/git/pulls
-https://github.com/git/git/pulls?state=closed
+\begin{itemize}
+	\item https://github.com/git/git
+	\item https://github.com/git/git/blob/master/block-sha1/sha1.h
+	\item https://github.com/git/git/commit/e3af72cdafab5993d18fae056f87e1d675913d08
+	\item https://github.com/git/git/pulls
+	\item https://github.com/git/git/pulls?state=closed
+\end{itemize}
 
 1. REST描述的是在网络中client和server的一种交互形式；REST本身不实用，实用的是如何设计 RESTful API（REST风格的网络接口）；
 2. Server提供的RESTful API中，URL中只使用名词来指定资源，原则上不使用动词。“资源”是REST架构或者说整个网络处理的核心。
 比如：
 \begin{itemize}
-	\item http://api.qc.com/v1/newsfeed: 获取某人的新鲜; 
+	\item http://api.qc.com/v1/newsfeed: 获取新闻; 
 	\item http://api.qc.com/v1/friends: 获取某人的好友列表;
 	\item http://api.qc.com/v1/profile: 获取某人的详细信息;
 \end{itemize}
@@ -166,7 +170,7 @@ https://github.com/git/git/pulls?state=closed
 	\item UPDATE http://api.qc.com/v1/profile: 更新个人资料
 \end{itemize}
 
-图例：
+如下图\ref{fig:3-2}例：
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\linewidth]{figure/3-2}

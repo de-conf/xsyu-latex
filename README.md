@@ -21,10 +21,12 @@ ps：
 
 ## 相关资源
 
+- 入门书籍--《不那么简短的 LaTeX简介》[下载地址](./lshort-zh-cn.pdf)
+
 - 一份其实很短的 LaTeX 入门文档：<http://liam0205.me/2014/09/08/latex-introduction/>
 
 - LaTeX 开源小屋：<http://www.latexstudio.net/>
 
 
 # 致谢
-感谢[胡学长](https://github.com/h2y/xsyu-latex)的该latex模板，本论文基于该模板
+感谢本校胡学长的[latex模板](https://github.com/h2y/xsyu-latex)，本论文基于该模板
