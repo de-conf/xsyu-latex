@@ -3,6 +3,11 @@ thesis.toc
 thesis.out
 thesis.blg
 thesis.bbl
+check.pdf
+check.toc
+check.out
+check.blg
+check.bbl
 *.aux
 *.synctex.gz
 *.log
