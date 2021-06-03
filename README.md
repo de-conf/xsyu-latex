@@ -11,7 +11,7 @@
 ## 使用方法
 包管理安装 `textlive-full`
 
-* 使用 vs code 编辑器打开 `thesis.tex`，并将编译方式设定为 `XeLaTeX`
+* 使用 vs code 编辑器打开 `thesis.tex`，编译方式请按照本项目的vs code默认设定`见 .vscode/settings.json`，如果只采用`xelatex`可能导致无法编译bibfile,无法生成参考文献。
 * ps： 在安装Vs code LaTex的相关扩展包后可以方便的及时预览修改
 
 * 尝试进行编译，生成 `thesis.pdf` 文档。
